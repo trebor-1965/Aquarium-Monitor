@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="21513" systemVersion="22A400" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="FreshAquarium" representedClassName="FreshAquarium" syncable="YES" codeGenerationType="class">
+        <attribute name="alkalinity" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="ammonia" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="carbon_change_date" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="date_of_readings" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="general_hardness" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="media_change_date" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="nitrate" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="nitrite" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="ph" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="tank_id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="tank_name" optional="YES" attributeType="String"/>
+        <attribute name="tank_size" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="tank_type" optional="YES" attributeType="String"/>
+        <attribute name="temperature" optional="YES" attributeType="Float" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="water_change_date" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+    </entity>
+    <entity name="SaltAquarium" representedClassName="SaltAquarium" syncable="YES" codeGenerationType="class">
+        <attribute name="alkalinity" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="ammonia" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="calicium" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="date_of_readings" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="filter_sock_change" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="last_carbon_change" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="last_media_change" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="last_water_change" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="magnesium" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="nitrate" optional="YES" attributeType="Integer 16" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="nitrite" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="notes" optional="YES" attributeType="String"/>
+        <attribute name="ph" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="phospate" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="salinity" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="tank_id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="tank_name" optional="YES" attributeType="String"/>
+        <attribute name="tank_size" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="tank_type" optional="YES" attributeType="String"/>
+        <attribute name="temperature" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+    </entity>
+</model>

@@ -1,0 +1,232 @@
+Aquarium App
+SwiftUI
+
+Description: This app is designed to help a user record aquarium parameters for marine, fresh water,
+African Cichlid, Plant & Discus, brackish, and pond aquariums.
+We want to be able to track:
+1. Salinity
+2. PH
+3. Alkalinity dkh
+4. Nitrate
+5. Nitrite
+6. Calcium
+7. Ammonia
+8. Last Water change date
+9. TDS in ro/di Water
+10. Ozone
+11. Phospate
+12. Temperature
+13. General Hardness
+14. Alkalinity
+
+The user interface will be text and or voice.
+I want to be able to use voice input to record the readings from the tests. 
+User taps the mic icon and says "Salinity 1.20" and have the app put that in the Salinity
+column. The user will be able to graph their parameters over time. use a value picker to
+pick a list of standard values if needed, but if the value is outside of the normal values
+then let the user enter what they need. While the program is active it can look at data 
+trends and pop alerts if it sees and values getting to warning levels.
+
+When the program starts it will open to the main screen with each water type;
+Marine, Freshwater, African Cichlid, Freshwater plants & Discus, brackish, and pond. 
+The user will be able to tap on which water type the want. They will be presented with a 
+grid of parameters for their particular water type. It will show any
+previous entries and a green plus button to add a new entry. The user will have the option to 
+type in the value or hit the micro phone button on the keyboard and speak it in. The current
+date will be added along with the entry. The user will have to option to change the date 
+if they are trying to enter values for a previous date. 
+
+Example:
+Water type: Marine
+
+Record Layout:
+tank_id
+tank_type
+tank_name
+tank_size
+date_of_readings
+temperature
+PH
+amonia
+salinity
+nitrate
+nitrite
+alkalinity
+calcium
+magnesium
+phospate
+last_water_change_date
+last_filtersock_chaange_date
+last_carbon_change_date
+last_mediate_change_date
+
+
+Using core data create records.
+
+Water tipe: Marine fish only
+uuid - Key Aquarium number
+Aquarium name - string
+Aquarium size gallons - int 
+Temperature - int (3) F or C
+pH - float (2,1)
+Ammonia - int (3) ppm
+SG or Salinity - float (1,3) or ppm float (2,1) 
+Nitrate - int (2) ppm
+Nitrite - int (2) ppm
+Alkalinity - double (2,1) dKH
+Calcium - int (3) ppm
+Magnesium - int (4) ppm
+Recorded Date - date
+Last Water change date - date
+Phospate - float (1,1) ppm
+
+Water tipe: Reef
+uuid - Key Aquarium number
+Aquarium name - string
+Aquarium size gallons - int 
+Temperature - int (3) F or C
+pH - float (2,1)
+Ammonia - int (3) ppm
+SG or Salinity - float (1,3) or ppm float (2,1) 
+Nitrate - int (2) ppm
+Nitrite - int (2) ppm
+Alkalinity - double (2,1) dKH
+Calcium - int (3) ppm
+Magnesium - int (4) ppm
+Recorded Date - date
+Last Water change date - date
+Phospate - float (1,1) ppm
+
+Water Type: Fresh Community
+uuid - Key Aquarium number
+Aquarium name - string
+Aquarium size gallons - int 
+Temperature - int (3) F or C
+pH - float (2,1)
+Ammonia - int (3) ppm
+Nitrite - int (2) ppm
+Nitrate - int (2) ppm
+Alkalinity - double (2,1) dKH
+General Hardness Int (2)
+Phospate - float (1,1) ppm
+Recorded Date - date
+Last Water change date - date
+
+Water Type: Fresh African Cichlid
+uuid - Key Aquarium number
+Aquarium name - string
+Aquarium size gallons - int 
+Temperature - int (3) F or C
+pH - float (2,1)
+Ammonia - int (3) ppm
+Nitrite - int (2) ppm
+Nitrate - int (2) ppm
+Alkalinity - double (2,1) dKH
+General Hardness Int (2)
+Recorded Date - date
+Last Water change date - date
+
+Water Type: Fresh Plants & Discus
+uuid - Key Aquarium number
+Aquarium name - string
+Aquarium size gallons - int 
+Temperature - int (3) F or C
+pH - float (2,1)
+Ammonia - int (3) ppm
+Nitrite - int (2) ppm
+Nitrate - int (2) ppm
+Alkalinity - double (2,1) dKH
+General Hardness Int (2)
+Recorded Date - date
+Last Water change date - date
+
+Water Type: Fresh Brackish
+uuid - Key Aquarium number
+Aquarium name - string
+Aquarium size gallons - int 
+Temperature - int (3) F or C
+pH - float (2,1)
+Ammonia - int (3) ppm
+Nitrite - int (2) ppm
+Nitrate - int (2) ppm
+Alkalinity - double (2,1) dKH
+General Hardness Int (2)
+Recorded Date - date
+Last Water change date - date
+
+Water Type: Fresh Pond
+uuid - Key Aquarium number
+Aquarium name - string
+Aquarium/pond size gallons - int 
+Temperature - int (3) F or C
+pH - float (2,1)
+Ammonia - int (3) ppm
+Nitrite - int (2) ppm
+Nitrate - int (2) ppm
+Alkalinity - double (2,1) dKH
+General Hardness Int (2)
+Recorded Date - date
+Last Water change date - date
+
+Program flow:
+On start of program after splash screen, present user with menu:
+1. enter new data
+2. Look at existing records
+3. Show graphs (if there are data saved.)
+
+If 1 then 
+	let user select aquarium type
+	get aquarium name
+	take user to enter testing results grid layout by reading type (ie: ph, salinity...)
+	provide done button that will save the record or cancel that will back out
+	have save button
+If 2 then
+    prompt (drop down list if more than one aquarium)
+	bring up existing records for selected aquarium sorted by newest date
+	use sortable grid view so data can be sorted by clicking on a column
+	allow users to select a row and edit data. If in edit mode activate save and
+	cancel buttons. 
+	
+	Need screen for data input
+	Need something to store data in
+	Need graph screen(s)
+	Web links to aquarium sites
+	
+Data Model:
+Tank_id - uuid
+Tank_type - string = salt
+Tank_name - string
+Tank size gallons - int 
+date_of_readings - date
+Temperature - int (3) F or C
+pH - float (2,1)
+Ammonia - int (3) ppm
+SG or Salinity - float (1,3) or ppm float (2,1) 
+Nitrate - int (2) ppm
+Nitrite - int (2) ppm
+Alkalinity - double (2,1) dKH
+Calcium - int (3) ppm
+Magnesium - int (4) ppm
+Phospate - float (1,1) ppm
+Last_Water_change_date - date
+Last_filersock_change_date - date
+Last_carbon_change_date - date
+Last_media_change_date - date
+
+Data Model 2:
+Tank_id - uuid
+Tank_type - String = fresh
+Tank_name - string
+Tank size gallons - int 
+date_of_readings - date
+Temperature - int (3) F or C
+pH - float (2,1)
+Ammonia - int (3) ppm
+Nitrite - int (2) ppm
+Nitrate - int (2) ppm
+Alkalinity - double (2,1) dKH
+General Hardness Int (2)
+Last_Water_change_date - date
+Last_carbon_change_date - date
+Last_media_change_date - date
+
