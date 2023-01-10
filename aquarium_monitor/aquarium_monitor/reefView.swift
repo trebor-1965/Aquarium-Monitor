@@ -121,10 +121,11 @@ struct reefView: View {
                         newAqua.last_carbon_change = last_carbon_change_date
                         newAqua.last_media_change = last_media_change_date
                         newAqua.filter_sock_change = last_filter_sock_change_date
-                                                
-                        try? aqua.save()
-   //                     Text("Count: \(aqua.count)")
-
+                        
+                        if (newAqua.tank_name != " ") {
+                            try? aqua.save()
+                            //                     Text("Count: \(aqua.count)")
+                        }
                         dismiss()
                     }
                 }
