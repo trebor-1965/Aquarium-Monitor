@@ -9,8 +9,9 @@ import SwiftUI
 
 struct ContentView: View {
     @Environment(\.managedObjectContext) var aqua
-    @FetchRequest(sortDescriptors: []) var saltaquariums: FetchedResults<SaltAquarium>
-    @FetchRequest(sortDescriptors: []) var freshaquariums: FetchedResults<FreshAquarium>
+  //  @FetchRequest(sortDescriptors: []) var saltaquariums: FetchedResults<SaltAquarium>
+//    @FetchRequest(sortDescriptors: []) var freshaquariums: FetchedResults<FreshAquarium>
+//    let salt: SaltAquarium
     
     var body: some View {
         NavigationView {
@@ -40,7 +41,7 @@ struct ContentView: View {
 //                    let aqua = FreshAquarium(context: aqua)
                 }
                 NavigationLink(destination: summaryView()) {
-                    Text("Summary")
+                   Text("Summary")
                 }
             }
             .navigationTitle("Select your aquarium type")
@@ -51,8 +52,8 @@ struct ContentView: View {
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
-    }
-}
+//struct ContentView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        ContentView()
+//    }
+//}
