@@ -75,7 +75,7 @@ struct reefView: View {
                                 TextField("", value: $alka, format: .number)}
                         }
                         Group {
-                            HStack {Text ("Calicium:")
+                            HStack {Text ("Calcium:")
                                     .foregroundColor(.accentColor)
                                 TextField("", value: $cal, format: .number)}
                             HStack {Text ("Magnesium:")
@@ -113,7 +113,7 @@ struct reefView: View {
                         newAqua.nitrate = Int16(trate)
                         newAqua.nitrite = Int16(trite)
                         newAqua.alkalinity = alka
-                        newAqua.calicium = Int16(cal)
+                        newAqua.calcium = Int16(cal)
                         newAqua.magnesium = Int16(mag)
                         newAqua.phospate = Double(phos)
                         newAqua.date_of_readings = Date()
